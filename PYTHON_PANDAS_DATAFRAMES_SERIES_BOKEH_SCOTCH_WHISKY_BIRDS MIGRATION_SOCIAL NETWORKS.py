@@ -4,8 +4,9 @@ Created on Mon Aug 14 00:57:53 2017
 PANDAS, DATAFRAMES, SERIES, BOKEH, SCOTCH WHISKY, BIRDS MIGRATION, SOCIAL NETWORKS
 @author: Emil
 """
-#####VIDEO1
+
 import pandas as pd
+from bokeh.plotting import figure, output_file, show
 x = pd.Series([6,3,8,6])
 print(x)
 #Out[108]:
@@ -110,7 +111,7 @@ hover.tooltips = {
     }
 show(fig)
 
-##HOMEWORK2
+##
 '''
     Let's create the names and colors we will use to plot the correlation matrix of whisky flavors. Later, we will also use these colors to plot each distillery geographically. Create a dictionary region_colors with regions as keys and cluster_colors as values.
     Print region_colors.
@@ -123,7 +124,7 @@ region_colors = dict(zip(regions,cluster_colors))
 
 print(region_colors)
 
-#########HOMEWORK3
+#########
 '''
  correlations is a two-dimensional np.array with both rows and columns corresponding to distilleries and elements corresponding to the flavor correlation of each row/column pair. Let's define a list correlation_colors, with string values corresponding to colors to be used to plot each distillery pair. Low correlations among distillery pairs will be white, high correlations will be a distinct group color if the distilleries from the same group, and gray otherwise. Edit the code to define correlation_colors for each distillery pair to have input 'white' if their correlation is less than 0.7.
 whisky.Group is a pandas dataframe column consisting of distillery group memberships. For distillery pairs with correlation greater than 0.7, if they share the same whisky group, use the corresponding color from cluster_colors. Otherwise, the correlation_colors value for that distillery pair will be defined as 'lightgray'.
